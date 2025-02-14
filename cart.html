@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Dream Mart</title>
+    <link rel="icon" href="acha wala lgog.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Cart page styles */
+        
+        .cart-page {
+            padding: 2rem;
+        }
+        
+        .cart-page h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        
+        .cart-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .cart-items {
+            background: #fff;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            gap: 1rem;
+        }
+        
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .item-details {
+            flex: 1;
+        }
+        
+        .item-details h3 {
+            margin: 0 0 0.5rem 0;
+            color: #333;
+        }
+        
+        .price {
+            color: #007bff;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+        
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .quantity-btn {
+            background: #f0f0f0;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        
+        .remove-btn {
+            background: none;
+            border: none;
+            color: #ff4444;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .cart-summary {
+            background: #fff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+        
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0;
+            color: #666;
+        }
+        
+        .summary-item.total {
+            font-weight: 600;
+            color: #333;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .checkout-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .checkout-btn:hover {
+            background: #0056b3;
+        }
+        
+        @media (max-width: 768px) {
+            .cart-container {
+                grid-template-columns: 1fr;
+            }
+            .cart-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .cart-item img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Same header as ecom.html -->
+        <header class="main-header">
+            <nav class="nav-container">
+                <div class="logo">
+                    <a href="ecom.html">
+                        <img src="acha wala lgog.png" alt="Dream Mart Logo" width="100" height="100">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Categories ▼</a>
+                        <div class="dropdown-content">
+                            <a href="mens.html">Men's Fashion</a>
+                            <a href="womens-fashion.html">Women's Fashion</a>
+                            <a href="kids-fashion.html">Kid's Fashion</a>
+
+                        </div>
+                    </li>
+                    <li><a href="ecom.html#enquiry-section">Contact</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+
+                    <li>
+                        <a href="cart.html" class="cart-link">
+                            <img src="cart.png" alt="Shopping Cart" width="25" height="25">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="cart-page">
+            <h1>Shopping Cart</h1>
+
+            <div class="cart-container">
+                <div class="cart-items">
+                    <!-- Example cart item -->
+                    <div class="cart-item">
+                        <img src="offer1.webp" alt="Product">
+                        <div class="item-details">
+                            <h3>Product Name</h3>
+                            <p class="price">$99.99</p>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" onclick="updateQuantity(this, -1)">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button class="quantity-btn" onclick="updateQuantity(this, 1)">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-btn" onclick="removeItem(this)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+
+                    <!-- Add more cart items as needed -->
+                </div>
+
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span>$99.99</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span>$10.00</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span>$109.99</span>
+                    </div>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </main>
+
+
+    </div>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 Dream Mart. All rights reserved.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" class="social-icon"><img src="facebook.jpg" alt="Facebook"></a>
+                <a href="https://www.x.com/" class="social-icon"><img src="twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/" class="social-icon"><img src="insta.webp" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+</html>

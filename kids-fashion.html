@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Fashion Store</title>
+    <link rel="icon" href="acha wala lgog.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-image: linear-gradient( rgba(255, 255, 255, 0.4), /* This creates 60% opacity (1 - 0.4 = 0.6) */
+            rgba(255, 255, 255, 0.4)), url('backcoverkids.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+        
+        .category-select {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .card h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        
+        .price {
+            color: #e44d26;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .add-to-cart {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .add-to-cart:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="ecom.html">
+                    <img src="acha wala lgog.png" alt="Dream Mart Logo" width="100" height="100">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Categories ▼</a>
+                    <div class="dropdown-content">
+                        <a href="mens.html">Men's Fashion</a>
+                        <a href="womens-fashion.html">Women's Fashion</a>
+                        <a href="kids-fashion.html">Kid's Fashion</a>
+
+                    </div>
+                </li>
+                <li><a href="ecom.html#enquiry-section">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        <img src="cart.png" alt="Shopping Cart" width="25" height="25">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Kids Fashion Store</h1>
+
+    <div class="category-select">
+        <label><b>Category:</b></label>
+        <select id="category">
+            <option value="Boys Top Wear">Boys Top Wear</option>
+            <option value="Boys Bottom Wear">Boys Bottom Wear</option>
+            <option value="Girls Top Wear">Girls Top Wear</option>
+            <option value="Girls Bottom Wear">Girls Bottom Wear</option>
+        </select>
+    </div>
+
+    <div class="products-grid">
+        <!-- Boys Top Wear Products (All 8 products together) -->
+        <div class="card" data-category="Boys Top Wear">
+            <img src="boy top 1.webp" alt="Product Image">
+            <h3>Casual T-Shirt</h3>
+            <p class="price">₹299</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Top Wear">
+            <img src="boy top 2.webp" alt="Product Image">
+            <h3>Denim Jacket</h3>
+            <p class="price">₹399</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Top Wear">
+            <img src="boy top 3.webp" alt="Product Image">
+            <h3>Sports T-Shirt</h3>
+            <p class="price">₹449</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Top Wear">
+            <img src="boy top 4.webp" alt="Product Image">
+            <h3>Formal Shirt</h3>
+            <p class="price">₹349</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Top Wear">
+            <img src="boy top 5.webp" alt="Product Image">
+            <h3>Polo T-Shirt</h3>
+            <p class="price">₹379</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Top Wear">
+            <img src="boy top 6.webp" alt="Product Image">
+            <h3>Winter Sweater</h3>
+            <p class="price">₹329</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Top Wear">
+            <img src="boy top 7.webp" alt="Product Image">
+            <h3>Printed Hoodie</h3>
+            <p class="price">₹399</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Top Wear">
+            <img src="boy top 8.webp" alt="Product Image">
+            <h3>Casual Shirt</h3>
+            <p class="price">₹349</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Boys Bottom Wear Products (All 8 products together) -->
+        <div class="card" data-category="Boys Bottom Wear">
+            <img src="boy lower 1.webp" alt="Product Image">
+            <h3>Casual Jeans</h3>
+            <p class="price">₹499</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Bottom Wear">
+            <img src="boy lower 2.webp" alt="Product Image">
+            <h3>Sports Shorts</h3>
+            <p class="price">₹299</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Bottom Wear">
+            <img src="boy lower 3.webp" alt="Product Image">
+            <h3>Track Pants</h3>
+            <p class="price">₹449</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Bottom Wear">
+            <img src="boy lower 4.webp" alt="Product Image">
+            <h3>Formal Pants</h3>
+            <p class="price">₹549</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Bottom Wear">
+            <img src="boy lower 5.webp" alt="Product Image">
+            <h3>Cargo Pants</h3>
+            <p class="price">₹279</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Bottom Wear">
+            <img src="boy lower 6.webp" alt="Product Image">
+            <h3>Denim Shorts</h3>
+            <p class="price">₹399</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Bottom Wear">
+            <img src="boy lower 7.webp" alt="Product Image">
+            <h3>School Pants</h3>
+            <p class="price">₹349</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Boys Bottom Wear">
+            <img src="boy lower 8.webp" alt="Product Image">
+            <h3>Cotton Shorts</h3>
+            <p class="price">₹499</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Girls Top Wear Products (All 8 products together) -->
+        <div class="card" data-category="Girls Top Wear">
+            <img src="girl top 1.webp" alt="Product Image">
+            <h3>Casual Top</h3>
+            <p class="price">₹299</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Top Wear">
+            <img src="girl top 2.webp" alt="Product Image">
+            <h3>Party Wear Top</h3>
+            <p class="price">₹399</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Top Wear">
+            <img src="girl top 3.webp" alt="Product Image">
+            <h3>Printed T-Shirt</h3>
+            <p class="price">₹299</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Top Wear">
+            <img src="girl top 4.webp" alt="Product Image">
+            <h3>Summer Top</h3>
+            <p class="price">₹449</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Top Wear">
+            <img src="girl top 5.webp" alt="Product Image">
+            <h3>Floral Blouse</h3>
+            <p class="price">₹379</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Top Wear">
+            <img src="girl top 6.webp" alt="Product Image">
+            <h3>Winter Sweater</h3>
+            <p class="price">₹329</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Top Wear">
+            <img src="girl top 7.webp" alt="Product Image">
+            <h3>Fancy Top</h3>
+            <p class="price">₹399</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Top Wear">
+            <img src="girl top 8.webp" alt="Product Image">
+            <h3>School Shirt</h3>
+            <p class="price">₹299</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Girls Bottom Wear Products (All 8 products together) -->
+        <div class="card" data-category="Girls Bottom Wear">
+            <img src="girl lower 1.webp" alt="Product Image">
+            <h3>Casual Skirt</h3>
+            <p class="price">₹399</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Bottom Wear">
+            <img src="girl lower 2.webp" alt="Product Image">
+            <h3>Denim Shorts</h3>
+            <p class="price">₹299</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Bottom Wear">
+            <img src="girl lower 3.webp" alt="Product Image">
+            <h3>Leggings</h3>
+            <p class="price">₹299</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Bottom Wear">
+            <img src="girl lower 4.webp" alt="Product Image">
+            <h3>Pleated Skirt</h3>
+            <p class="price">₹399</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Bottom Wear">
+            <img src="girl lower 5.webp" alt="Product Image">
+            <h3>School Skirt</h3>
+            <p class="price">₹349</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Bottom Wear">
+            <img src="girl lower 6.webp" alt="Product Image">
+            <h3>Palazzo Pants</h3>
+            <p class="price">₹499</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Bottom Wear">
+            <img src="girl lower 7.jpg" alt="Product Image">
+            <h3>Cotton Pants</h3>
+            <p class="price">₹399</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="Girls Bottom Wear">
+            <img src="girl lower 8.webp" alt="Product Image">
+            <h3>Jeans</h3>
+            <p class="price">₹499</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 Dream Mart. All rights reserved.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" class="social-icon"><img src="facebook.jpg" alt="Facebook"></a>
+                <a href="https://www.x.com/" class="social-icon"><img src="twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/" class="social-icon"><img src="insta.webp" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Category filter
+        const categorySelect = document.getElementById('category');
+        const products = document.querySelectorAll('.card');
+
+        // Function to filter products
+        const filterProducts = () => {
+            const selectedCategory = categorySelect.value;
+            products.forEach(product => {
+                if (product.dataset.category === selectedCategory) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        };
+
+        // Filter products when category changes
+        categorySelect.addEventListener('change', filterProducts);
+
+        // Filter products immediately when page loads
+        filterProducts();
+    </script>
+</body>
+
+</html>

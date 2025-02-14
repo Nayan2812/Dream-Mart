@@ -1,0 +1,222 @@
+
+
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        
+        header nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        
+        header nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        header nav ul li a:hover {
+            color: #77aaff;
+        }
+        
+        main {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        
+        main h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        main p {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #77aaff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .btn:hover {
+            background: #5599ff;
+        }
+        
+        .featured-products {
+            margin-top: 40px;
+        }
+        
+        .featured-products h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .product {
+            display: inline-block;
+            width: 100%;
+            margin: 1.5%;
+            text-align: center;
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .product img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .product h3 {
+            color: #333;
+        }
+        
+        .product p {
+            color: #77aaff;
+            font-size: 18px;
+        }
+        
+        .testimonials {
+            margin-top: 40px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .testimonials blockquote {
+            font-style: italic;
+            color: #666;
+            margin: 20px auto;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .testimonials cite {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+        
+        .newsletter {
+            margin-top: 40px;
+            text-align: center;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .newsletter h2 {
+            color: #333;
+        }
+        
+        .newsletter form {
+            margin-top: 20px;
+        }
+        
+        .newsletter input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .newsletter button {
+            padding: 10px 20px;
+            background: #77aaff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .newsletter button:hover {
+            background: #5599ff;
+        }
+        
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-top: #77aaff 3px solid;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #77aaff;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-media a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+        .social-media img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+
