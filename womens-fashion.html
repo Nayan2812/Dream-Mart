@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Fashion Store</title>
+    <link rel="icon" href="acha wala lgog.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-image: linear-gradient( rgba(255, 255, 255, 0.4), /* This creates 60% opacity (1 - 0.4 = 0.6) */
+            rgba(255, 255, 255, 0.4)), url('backcoverwomen.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+        
+        .category-select {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .card h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        
+        .price {
+            color: #e44d26;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .add-to-cart {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .add-to-cart:hover {
+            background: #555;
+        }
+    </style>
+
+
+</head>
+<header class="main-header">
+    <nav class="nav-container">
+        <div class="logo">
+            <a href="ecom.html">
+                <img src="acha wala lgog.png" alt="Dream Mart Logo" width="100" height="100">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Categories ▼</a>
+                <div class="dropdown-content">
+                    <a href="mens.html">Men's Fashion</a>
+                    <a href="womens-fashion.html">Women's Fashion</a>
+                    <a href="kids-fashion.html">Kid's Fashion</a>
+
+                </div>
+            </li>
+            <li><a href="ecom.html#enquiry-section">Contact</a></li>
+            <li><a href="profile.html">Profile</a></li>
+
+            <li>
+                <a href="cart.html" class="cart-link">
+                    <img src="cart.png" alt="Shopping Cart" width="25" height="25">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<h1>Women's Fashion Store</h1>
+
+<div class="category-select">
+    <label><b>Category:</b></label>
+    <select id="category">
+            <option value="Women's Top wear">Women's Top wear</option>
+            <option value="Women's Bottom Wear">Women's Bottom Wear</option>
+            <option value="One Piece">One Piece</option>
+        </select>
+</div>
+
+<div class="products-grid">
+    <!-- Product 1 -->
+    <div class="card" data-category="Women's Top wear">
+        <img src="women top 1.webp" alt="Product Image">
+        <h3>Floral Print Blouse</h3>
+        <p class="price">₹599</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="card" data-category="Women's Top wear">
+        <img src="women top 2.webp" alt="Product Image">
+        <h3>Elegant Silk Top</h3>
+        <p class="price">₹899</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="card" data-category="Women's Top wear">
+        <img src="women top 3.webp" alt="Product Image">
+        <h3>Casual Cotton Shirt</h3>
+        <p class="price">₹499</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="card" data-category="Women's Top wear">
+        <img src="women top 4.webp" alt="Product Image">
+        <h3>Designer Crop Top</h3>
+        <p class="price">₹699</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="card" data-category="Women's Top wear">
+        <img src="women top 5.webp" alt="Product Image">
+        <h3>Embroidered Kurti</h3>
+        <p class="price">₹999</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="card" data-category="Women's Top wear">
+        <img src="women top 6.webp" alt="Product Image">
+        <h3>Boho Style Tunic</h3>
+        <p class="price">₹799</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="card" data-category="Women's Top wear">
+        <img src="women top 7.webp" alt="Product Image">
+        <h3>Formal Office Shirt</h3>
+        <p class="price">₹649</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="card" data-category="Women's Top wear">
+        <img src="women top 8.webp" alt="Product Image">
+        <h3>Party Wear Top</h3>
+        <p class="price">₹899</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="card" data-category="Women's Bottom Wear">
+        <img src="women bottom 1.webp" alt="Product Image">
+        <h3>Designer Palazzo</h3>
+        <p class="price">₹899</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 10 -->
+    <div class="card" data-category="Women's Bottom Wear">
+        <img src="women bottom 2.webp" alt="Product Image">
+        <h3>Slim Fit Jeans</h3>
+        <p class="price">₹1199</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 11 -->
+    <div class="card" data-category="Women's Bottom Wear">
+        <img src="women bottom 3.webp" alt="Product Image">
+        <h3>Printed Leggings</h3>
+        <p class="price">₹449</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 12 -->
+    <div class="card" data-category="Women's Bottom Wear">
+        <img src="women bottom 4.webp" alt="Product Image">
+        <h3>Formal Trousers</h3>
+        <p class="price">₹899</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 13 -->
+    <div class="card" data-category="Women's Bottom Wear">
+        <img src="women bottom 5.webp" alt="Product Image">
+        <h3>Designer Skirt</h3>
+        <p class="price">₹799</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 14 -->
+    <div class="card" data-category="Women's Bottom Wear">
+        <img src="women bottom 6.webp" alt="Product Image">
+        <h3>Culottes</h3>
+        <p class="price">₹699</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 15 -->
+    <div class="card" data-category="Women's Bottom Wear">
+        <img src="women bottom 7.webp" alt="Product Image">
+        <h3>High-Waist Pants</h3>
+        <p class="price">₹999</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 16 -->
+    <div class="card" data-category="Women's Bottom Wear">
+        <img src="women bottom 8.webp" alt="Product Image">
+        <h3>Ethnic Palazzo Set</h3>
+        <p class="price">₹1099</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 17 -->
+    <div class="card" data-category="One Piece">
+        <img src="women full.webp" alt="Product Image">
+        <h3>Floral Maxi Dress</h3>
+        <p class="price">₹899</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 18 -->
+    <div class="card" data-category="One Piece">
+        <img src="women full 2.webp" alt="Product Image">
+        <h3>Casual Denim Jumpsuit</h3>
+        <p class="price">₹1099</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 19 -->
+    <div class="card" data-category="One Piece">
+        <img src="women full 3.webp" alt="Product Image">
+        <h3>Summer Beach Dress</h3>
+        <p class="price">₹699</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 20 -->
+    <div class="card" data-category="One Piece">
+        <img src="women full 4.webp" alt="Product Image">
+        <h3>Party Wear Gown</h3>
+        <p class="price">₹1199</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 21 -->
+    <div class="card" data-category="One Piece">
+        <img src="women full 5.webp" alt="Product Image">
+        <h3>Casual A-Line Dress</h3>
+        <p class="price">₹799</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 22 -->
+    <div class="card" data-category="One Piece">
+        <img src="women full 6.webp" alt="Product Image">
+        <h3>Office Wear Jumpsuit</h3>
+        <p class="price">₹999</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 23 -->
+    <div class="card" data-category="One Piece">
+        <img src="women full 7.webp" alt="Product Image">
+        <h3>Ethnic Anarkali Suit</h3>
+        <p class="price">₹1149</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 24 -->
+    <div class="card" data-category="One Piece">
+        <img src="women full 8.webp" alt="Product Image">
+        <h3>Cocktail Mini Dress</h3>
+        <p class="price">₹849</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+<footer id="footer">
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>&copy; 2025 Dream Mart. All rights reserved.</p>
+        </div>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" class="social-icon"><img src="facebook.jpg" alt="Facebook"></a>
+            <a href="https://www.x.com/" class="social-icon"><img src="twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/" class="social-icon"><img src="insta.webp" alt="Instagram"></a>
+        </div>
+    </div>
+</footer>
+</body>
+
+<script>
+    // Category filter
+    const categorySelect = document.getElementById('category');
+    const products = document.querySelectorAll('.card');
+
+    // Function to filter products
+    const filterProducts = () => {
+        const selectedCategory = categorySelect.value;
+        products.forEach(product => {
+            if (product.dataset.category === selectedCategory) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    };
+
+    // Filter products when category changes
+    categorySelect.addEventListener('change', filterProducts);
+
+    // Filter products immediately when page loads
+    filterProducts();
+</script>
+
+</html>
